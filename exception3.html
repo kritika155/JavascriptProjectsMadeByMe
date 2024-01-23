@@ -1,0 +1,45 @@
+<html>
+<head>
+    <title>Try catch throw example</title>
+</head>
+<body bgcolor=blue text="white">
+    <h4> Enter Week Day Please </h4>
+    Value 1: <input type="text" id="t1"/> <br>
+    Value 1: <input type="button" id="b1" value="click me" onclick="pp()"/> <br>
+    <script>
+        function pp() {
+            var c = parseInt(document.all.t1.value)
+            try {
+                switch (c) {
+                    case 1:
+                        throw "Sunday"
+                        break;
+                    case 2:
+                        throw "Monday"
+                        break;
+                    case 3:
+                        throw "Tuesday"
+                        break;
+                    case 4:
+                        throw "Wednesday"
+                        break;
+                    case 5:
+                        throw "Thursday"
+                        break;
+                    case 6:
+                        throw "Friday"
+                        break;
+                    case 7:
+                        throw "Saturday"
+                        break;
+                    default:
+                        throw "The real error"
+                }
+            }
+            catch (error) {
+                alert(error)
+            }
+        }
+    </script>
+</body>
+</html>

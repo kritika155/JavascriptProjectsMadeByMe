@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>example</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+      #menu {
+        background: #f7f7f7;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="menu-button">Menu</button>
+    <ul id="menu" class="hidden">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+    </ul>
+    <script>
+      const menuButton = document.getElementById("menu-button");
+      const menu = document.getElementById("menu");
+
+      // show/hide the menu when the button is clicked
+      menuButton.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+
+      // hide the menu when a click event occurs outside the menu
+      document.addEventListener("click", (event) => {
+        if (
+          !menu.contains(event.target) &&
+          !menuButton.contains(event.target)
+        ) {
+          menu.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>

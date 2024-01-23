@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+  </head>
+  <body>
+    <script>
+      //            var arr= [1,1,2,2,2,3,3,4,5,6,6,7,8,9];
+      //            var duplicates=[];
+      //            arr.forEach((a)=>{
+      // if(!duplicates.includes(a)){
+      // duplicates.push(a);
+      // }
+      // else{
+      //     return duplicates;
+      // }
+      //            })
+
+      let str = "AAaaBBBbCCc";
+      let output = "A2a2B3b1C2c1";
+      let arr = new Array(256);
+      let length = str.length();
+      let count = 0;
+      for (let i = 0; i < length; i++) {
+        arr[str.charAt(i)]++;
+      }
+
+      // let txt = 'hello';
+      let txt = "AAaaBBBbCCc";
+      let txtArr = txt.split("");
+      let objCnt = txtArr.reduce((accum, currVal) => {
+        accum[currVal] = (accum[currVal] || 0) + 1;
+        return accum;
+      }, {});
+      console.log(objCnt);
+      let foundArr=[];
+    objCnt=  {A: 2, a: 2, B: 3, b: 1, C: 2,a:2,b:1,c:1};
+    keysArr=Object.keys(objCnt);
+    reverse="";
+    keysArr.forEach(element => {
+        reverse+=element+objCnt[element];
+        console.log(reverse);
+    });
+    console.log("Output:",reverse);
+    </script>
+  </body>
+</html>

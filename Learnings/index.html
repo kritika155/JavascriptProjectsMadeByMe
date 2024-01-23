@@ -1,0 +1,36 @@
+<html>
+<head>
+    <title>Try catch throw example</title>
+</head>
+<body>
+    <div>
+        <p>Inner Result:</p>
+        <div id="innerResult"></div>
+    </div>
+    <div>
+        <p>Outer Result:</p>
+        <div id="outerResult"></div>
+    </div>
+    <script>
+       // Initialize a global variable
+var species = "human";
+ 
+ function transform() {
+   // Initialize a local, function-scoped variable
+   var species = "werewolf";
+   console.log(species);
+   let result1=document.getElementById("innerResult");
+   result1.textContent=species;
+  
+ }
+ 
+ // Log the global and local variable
+ console.log(species);
+ 
+ transform();
+ console.log(species);
+ let resul2=document.getElementById("outerResult");
+   resul2.textContent=species;
+    </script>
+</body>
+</html>

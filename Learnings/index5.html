@@ -1,0 +1,51 @@
+<html>
+  <head> </head>
+  <body>
+    <script>
+      function Student() {
+        this.name = "John";
+        this.gender = "M";
+      }
+
+      Student.prototype.age = 15;
+
+      var studObj1 = new Student();
+      //   alert(studObj1.age); // 15
+
+      var studObj2 = new Student();
+      //   alert(studObj2.age); // 15
+      console.log(Student);
+      const person = {
+        name: "Kritika",
+      };
+      //   var person = new Object();
+      //   person.name = "Kritika";
+      person.prototype = Object.create(Student);
+      //   person.prototype.age = 15;
+      console.log(person);
+
+      ////MY ANSWERS
+      //       var arr=[1,2,3,4,5];
+      //       var newArr=arr.map((a)=>{
+      //         a*2
+      //       })
+      //       var oddNumbersArr=arr.filter((a)=>{
+      //         a%2!=0
+      //       })
+      //       console.log(oddNumbersArr);
+      //       var sum=arr.reduce((acc,a)=>{
+      // acc+a
+      //       },0)
+      //       console.log(sum);
+
+      var arr = [1, 2, 3, 4, 5];
+      var newArr = arr.map((a) => {
+        a * 2;
+      });
+      var oddNumbersArr = arr.filter((a) => a % 2 != 0);
+      console.log(oddNumbersArr);
+      var sum = arr.reduce((acc, a) => acc + a);
+      console.log(sum);
+    </script>
+  </body>
+</html>
